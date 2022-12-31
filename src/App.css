@@ -1,38 +1,459 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  position: sticky;
+  width: 100%;
+  top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
   display: flex;
-  flex-direction: column;
+  background-color: #a544ff;
+  color: #FFFF;
+  width: 100%;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ul li {
+  margin: 0px 23px;
+  list-style: none;
+  font-size: 17px;
+}
+
+ul a li {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul a {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.toptext {
+  color: white;
+  position: absolute;
+  left: 37px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Texturina', serif;
+}
+
+.toptext a {
+  color: white;
+}
+
+.container {
+  height: 80vh;
+  margin: 2vw auto;
+  width: 80vw;
+  min-height: 100vh;
+}
+
+.container h1 {
+  font-size: 15px;
+}
+
+#myBox {
+  font-size: 15px;
+  width: 1185px;
+  height: 219px;
+  padding: 9px 8px;
+  border: 2px solid #a544ff;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn {
+  margin: 0px 6px;
+  margin-bottom: 12px;
+  padding: 10px 6px;
+  font-weight: bold;
+  background-color: #a544ff;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #9113eb;
+}
+
+.topbtn {
+  padding: 10px 21px;
+  margin: 0px 19px;
+  background-color: #ebe2e2;
+  border: none;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.topbtn:hover {
+  background-color: #b6afaf;
+}
+
+
+.alert {
+  padding: 15px;
+  background-color: #c997f3;
+  /* Red */
+  color: white;
+  margin-bottom: 2px;
+  height: 38px;
+}
+
+.preview{
+  min-width: 80vw;
+}
+footer {
+  position: fixed;
+  padding: 6px 0px;
+  font-size: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+/* Media Query 300 min Width */
+@media only screen and (min-width: 300px) {
+  nav ul {
+    padding: 23px 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .toptext {
+    font-size: 20px;
+    left: 12px;
+    align-items: center;
+    display: flex;
+    font-family: 'Texturina', serif;
+    ;
+  }
+
+  ul a li {
+    font-size: 13px;
+    margin: 0px 7px;
+  }
+
+  .alert {
+    padding: 3px 12px;
+    background-color: #c997f3;
+    color: white;
+    height: 33px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alertHeight {
+    height: 35px;
+  }
+
+  .container {
+    margin: 3vw auto;
+    width: 89vw;
+  }
+
+  .container h1 {
+    font-size: 2.5vh;
+    height: 11vh;
+  }
+
+  #myBox {
+    font-size: 1.5vh;
+    height: 60vw;
+    width: 38.5vh;
+    padding: 1vh 0.8vh;
+    border: 0.5vh solid #a544ff;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .btn {
+    margin: 0px 3px;
+    margin-bottom: -7px;
+    padding: 8px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: #a544ff;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+
+  div h2 {
+    margin-top: 17px;
+    font-size: 17px;
+  }
+
+  div p {
+    font-size: 12px;
+  }
+
+  .topbtn {
+    padding: 5px 8px;
+    margin: 0px 5px;
+    background-color: #ebe2e2;
+    border: none;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+/* Media Query 700 min Width */
+@media only screen and (min-width: 700px) {
+  nav ul {
+    padding: 23px 0px;
+  }
+
+  .toptext {
+    font-size: 18px;
+    left: 25px;
+    font-family: 'Texturina', serif;
+  }
+
+  ul a li {
+    font-size: 15px;
+    margin: 0px 14px;
+  }
+
+  .alert {
+    padding: 5px 20px;
+    background-color: #c997f3;
+    color: white;
+    height: 37px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alertHeight {
+    height: 40px;
+  }
+
+  .container h1 {
+    font-size: 2.5vh;
+  }
+
+  #myBox {
+    font-size: 1.75vh;
+    width: 84vw;
+    height: 32vh;
+  }
+
+  .btn {
+    margin: 0vh 0.7vh;
+    margin-bottom: -7px;
+    padding: 1.3vh 1.5vh;
+    font-size: 1.4vh;
+    font-weight: 600;
+    background-color: #a544ff;
+    color: white;
+    border-radius: 1.5vh;
+    border: none;
+    margin-top: 1.5vh;
+    cursor: pointer;
+  }
+
+  .container h2 {
+    font-size: 2.5vh;
+  }
+
+  .container p {
+    font-size: 2vh;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .topbtn {
+    padding: 10px 18px;
+    margin: 0px 5px;
+    background-color: #ebe2e2;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  footer {
+    padding: 0.8vh 0vh;
+    font-size: 1.5vh;
+    font-weight: bold;
+  }
+}
+
+/* Media Query 1100 min Width */
+@media only screen and (min-width: 1100px) {
+  .toptext {
+    font-size: 3vh;
+  }
+
+  ul a li {
+    font-size: 2.3vh;
+    margin: 0vh 2vh;
+  }
+
+  .container h1 {
+    font-size: 3.6vh;
+  }
+
+  #myBox {
+    width: 85vw;
+    height: 43vh;
+  }
+
+  .btn {
+    padding: 1.7vh 1.8vh;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 1vh;
+  }
+
+  .container h2 {
+    font-size: 3.1vh;
+  }
+
+  .container p {
+    font-size: 2.3vh;
+  }
+
+  footer {
+    padding: 1.4vh;
+    font-size: 2.2vh;
+    font-weight: 900;
+  }
+}
+
+/* Media Query 1500 min Width */
+@media only screen and (min-width: 1500px) {
+  .toptext {
+    font-size: 3.5vh;
+    left: 32px;
+    font-family: 'Texturina', serif;
+  }
+
+  .container {
+    margin: 2vw auto;
+  }
+
+  nav ul {
+    padding: 15px 0px;
+  }
+
+  ul a li {
+    font-size: 21px;
+    margin: 0px 20px;
+  }
+
+  .container h1 div {
+    font-size: 4.5vh;
+  }
+
+
+  #myBox {
+    font-size: 17px;
+    width: 80vw;
+    height: 33vh;
+  }
+
+  .btn {
+    margin: 0px 6px;
+    /* margin-bottom: 0px; */
+    padding: 17px 13px;
+    font-size: 13px;
+    font-weight: 800;
+    background-color: #a544ff;
+    color: white;
+    border-radius: 9px;
+    border: none;
+    margin-top: 13px;
+    cursor: pointer;
+  }
+
+  .container h2 {
+    font-size: 3.7vh;
+  }
+
+  .container p {
+    font-size: 20px;
+  }
+
+  .topbtn {
+    padding: 14px 23px;
+    margin: 0px 11px;
+    background-color: #ebe2e2;
+    border: none;
+    border-radius: 13px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 38px;
+  }
+}
+
+
+
+/* Media Query 2000 min Width */
+@media only screen and (min-width: 2000px) {
+  .container {
+    margin: 2vw auto;
+  }
+
+  nav ul {
+    padding: 15px 0px;
+  }
+
+  .toptext {
+    font-size: 31px;
+    left: 41px;
+    font-family: 'Texturina', serif;
+  }
+
+  ul a li {
+    font-size: 21px;
+    margin: 0px 20px;
+  }
+
+  .container h1 div {
+    font-size: 28px;
+  }
+
+  #myBox {
+    font-size: 17px;
+    width: 80vw;
+    height: 33vh;
+  }
+
+  .btn {
+    padding: 24px 18px;
+    font-size: 18px;
+    border-radius: 24px;
+    margin-top: 18px;
+  }
+
+  .container h2 {
+    font-size: 36px;
+  }
+
+  .container p {
+    font-size: 26px;
   }
 }
